@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindBetter</title>
+  <style>
+    #fileinput {
+      margin-bottom: 1rem;
+    }
+    .editor-section {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      border: 1px solid gray;
+      background-color: whitesmoke;
+      margin-bottom: 1rem;
+    }
+    .editor-section > *:not(:first-child) {
+      margin-left: 1rem;
+    }
+    .editor-section .new-src-picker {
+      display: inline-flex;
+      width: 15rem;
+    }
+    .editor-section .old-preview,
+    .editor-section .new-preview {
+      display: inline-flex;
+      flex-grow: 1;
+      flex-shrink: 1;
+      max-width: calc((100% - 15rem - 2rem) / 2);
+    }
+    .editor-section .old-preview img,
+    .editor-section .new-preview img {
+      max-width: 100%;
+    }
+    #submitzone {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="fileinput">
+    <input type="file" id="filepicker">
+  </div>
+  <div id="imageseditor"></div>
+  <div id="submitzone">
+    <button type="button" id="savebutton">Save</button>
+  </div>
+  <script src="/scripts/utils.js" defer></script>
+  <script src="/scripts/index.js" defer></script>
+</body>
+</html>
